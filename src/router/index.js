@@ -10,6 +10,7 @@ const routes = [
     alias: "/",
     name: "home",
     component: HomeView,
+    meta: { hideHeader: true },
   },
   {
     path: "/about",
