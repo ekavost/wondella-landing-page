@@ -1,5 +1,10 @@
 <template>
-  <v-tabs>
+  <v-tabs
+    background-color="#FAFAFA"
+    color="var(--orange)"
+    slider-color="var(--orange)"
+    show-arrows
+  >
     <v-tab :to="{ name: 'home' }">Inicio</v-tab>
     <v-tab :to="{ name: 'about' }">Resumen</v-tab>
     <v-tab :to="{ name: 'destinations' }">Destinos</v-tab>
