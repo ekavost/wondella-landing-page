@@ -17,6 +17,7 @@ const routes = [
     name: "about",
     component: () =>
       import(/* webpackChunkName: "about" */ "@/views/AboutView.vue"),
+    meta: { imageUrl: require("@/assets/images/antelope.jpg") },
   },
   {
     path: "/accommodation",
@@ -25,6 +26,7 @@ const routes = [
       import(
         /* webpackChunkName: "accomodation" */ "@/views/AccommodationView.vue"
       ),
+    meta: { imageUrl: require("@/assets/images/skyscrapers.jpg") },
   },
   {
     path: "/destinations",
@@ -33,6 +35,7 @@ const routes = [
       import(
         /* webpackChunkName: "destinations" */ "@/views/DestinationsView.vue"
       ),
+    meta: { imageUrl: require("@/assets/images/beach.jpg") },
   },
   {
     path: "/information",
@@ -41,18 +44,21 @@ const routes = [
       import(
         /* webpackChunkName: "information" */ "@/views/InformationView.vue"
       ),
+    meta: { imageUrl: require("@/assets/images/skyscrapers.jpg") },
   },
   {
     path: "/map",
     name: "map",
     component: () =>
       import(/* webpackChunkName: "map" */ "@/views/MapView.vue"),
+    meta: { imageUrl: require("@/assets/images/waterfall.jpg") },
   },
   {
     path: "/transport",
     name: "transport",
     component: () =>
       import(/* webpackChunkName: "transport" */ "@/views/TransportView.vue"),
+    meta: { imageUrl: require("@/assets/images/beach.jpg") },
   },
 ];
 

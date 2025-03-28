@@ -24,10 +24,14 @@ export default {
   components: {
     TheNavBar,
   },
+  props: {
+    imgUrl: {
+      type: String,
+    },
+  },
   data() {
     return {
       title: "Titulo de viaje",
-      imgUrl: "https://picsum.photos/1920/1080?random",
       logoUrl: require("@/assets/logo/wondella-logo.png"),
     };
   },
