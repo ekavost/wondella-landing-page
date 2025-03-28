@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app shrink-on-scroll prominent :src="imgUrl">
+  <v-app-bar app shrink-on-scroll prominent :src="getImageUrl">
     <v-container fluid class="d-flex justify-space-between align-center">
       <v-img contain max-width="120" :src="logoUrl"></v-img>
       <v-toolbar-title class="white--text text-uppercase">
@@ -24,16 +24,16 @@ export default {
   components: {
     TheNavBar,
   },
-  props: {
-    imgUrl: {
-      type: String,
-    },
-  },
   data() {
     return {
       title: "Titulo de viaje",
       logoUrl: require("@/assets/logo/wondella-logo.png"),
     };
+  },
+  computed: {
+    getImageUrl() {
+      return this.$route.meta.imageUrl;
+    },
   },
 };
 </script>

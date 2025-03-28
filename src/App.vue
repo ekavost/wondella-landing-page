@@ -1,9 +1,6 @@
 <template>
   <v-app>
-    <the-header
-      v-if="!$route.meta.hideHeader"
-      :imgUrl="$route.meta.imageUrl"
-    ></the-header>
+    <the-header v-if="!$route.meta.hideHeader"></the-header>
     <v-main>
       <router-view />
     </v-main>
