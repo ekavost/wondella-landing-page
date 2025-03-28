@@ -5,10 +5,10 @@
       <v-toolbar-title class="white--text text-uppercase">
         {{ title }}
       </v-toolbar-title>
-      <v-btn color="#9E9E9E">¡Reserve ahora!</v-btn>
-      <!-- TODO:
-      Añadir opción de compartir en Facebook and x
-      https://developers.facebook.com/docs/sharing/reference/share-dialog -->
+      <div class="d-flex flex-column align-center">
+        <social-media-share class="mb-3"></social-media-share>
+        <v-btn color="#9E9E9E">¡Reserve ahora!</v-btn>
+      </div>
     </v-container>
     <template v-slot:extension>
       <the-nav-bar></the-nav-bar>
@@ -18,11 +18,12 @@
 
 <script>
 import TheNavBar from "@/components/TheNavBar.vue";
-
+import SocialMediaShare from "@/components/SocialMediaShare.vue";
 export default {
   name: "TheHeader",
   components: {
     TheNavBar,
+    SocialMediaShare,
   },
   data() {
     return {
